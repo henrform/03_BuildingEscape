@@ -12,12 +12,13 @@ BuildingEscape/Content/StarterContent/
 # VS Generated Files #
 ######################
 *.VC.db
+*.VC.opendb
+*.sln
 
 ###################################
 # Stuff I don't know where to put #
 ###################################
 
 *.ipch
-/BuildingEscape/.vs/BuildingEscape/v15/Browse.VC.opendb
 /BuildingEscape/.vs/BuildingEscape/v15/Solution.VC.db-shm
 /BuildingEscape/.vs/BuildingEscape/v15/Solution.VC.db-wal
