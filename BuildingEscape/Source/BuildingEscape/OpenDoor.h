@@ -4,8 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Engine/TriggerVolume.h"
-#include "Components/ActorComponent.h"
 #include "GameFramework/Actor.h"
+#include "Components/PrimitiveComponent.h"
+#include "Engine/World.h"
+#include "GameFramework/Actor.h"
+#include "Components/ActorComponent.h"
 #include "OpenDoor.generated.h"
 
 
@@ -30,6 +33,8 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	float GetTotalMassOfActorsPlate();
+
 private:
 	UPROPERTY(EditAnywhere)
 	float OpenAngle = 90.f;
@@ -42,7 +47,6 @@ private:
 
 	float LastDoorOpenTime;
 
-	AActor* ActorThatOpens;
 	AActor* Owner;
 	
 };

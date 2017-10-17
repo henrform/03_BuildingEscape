@@ -14,7 +14,6 @@ UGrabber::UGrabber()
 	// ...
 }
 
-
 // Called when the game starts
 void UGrabber::BeginPlay()
 {
@@ -66,7 +65,7 @@ void UGrabber::Grab()
 	auto ComponentToGrab = HitResult.GetComponent(); // gets the mesh in our case
 	auto ActorHit = HitResult.GetActor();
 
-	/// If we hit something the attach a physics handle
+	/// If we hit something then attach a physics handle
 	if(ActorHit)
 		PhysicsHandle->GrabComponent(
 			ComponentToGrab,
@@ -80,7 +79,6 @@ void UGrabber::Release()
 {
 	PhysicsHandle->ReleaseComponent();
 }
-
 
 const FHitResult UGrabber::GetFirstPhysicsBodyInReach()
 {
@@ -104,6 +102,7 @@ const FHitResult UGrabber::GetFirstPhysicsBodyInReach()
 
 	return HitResult;
 }
+
 FVector UGrabber::GetReachLineStart()
 {
 	FVector PlayerViewPointLocation;
@@ -115,6 +114,7 @@ FVector UGrabber::GetReachLineStart()
 
 	return PlayerViewPointLocation;
 }
+
 FVector UGrabber::GetReachLineEnd()
 {
 	FVector PlayerViewPointLocation;
